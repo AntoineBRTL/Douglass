@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@types/node": "^18.11.19",
-    "node-fetch": "^3.3.0",
     "say": "^0.16.0"
   },
   "devDependencies": {
