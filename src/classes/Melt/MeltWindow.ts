@@ -95,6 +95,8 @@ export class MeltWindow extends BrowserWindow
                         else
                             out1 = vec4(texture(texture0, uv));
                     }
+
+                    out1 += vec4(0.005, 0.0, 0.0, 0.0);
                 }\`;
         
                 class MeltRenderer
