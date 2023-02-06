@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@types/node": "^18.11.19",
+    "node-fetch": "^3.3.0",
+    "say": "^0.16.0"
+  },
+  "devDependencies": {
+    "electron": "^22.2.0"
+  },
+  "name": "douglass",
+  "version": "1.0.0",
+  "main": "src/Main.js",
+  "scripts": {
+    "start": "electron src/Main.js"
+  },
+  "author": "Antoine Bartoli",
+  "license": "ISC",
+  "description": ""
+}

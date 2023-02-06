@@ -1,0 +1,5 @@
+/bin
+/Compiler.ps1
+/dist
+/node_modules
+/tsconfig.json
