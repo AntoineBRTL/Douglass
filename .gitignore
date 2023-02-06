@@ -4,3 +4,5 @@
 /node_modules
 /tsconfig.json
 /src/classes/**/**.js
+/src/classes/**.js
+/src/**.js

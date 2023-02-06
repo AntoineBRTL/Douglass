@@ -24,15 +24,15 @@ export class MeltWindow extends BrowserWindow
             }
         });
 
-        this.setIgnoreMouseEvents(true);
+        // this.setIgnoreMouseEvents(true);
         // this.webContents.openDevTools({mode:"detach"});
 
-        let html = `<body style='overflow: hidden; margin: 0px;'>
-            <audio id="Music" autoplay>
+        let html = `<body style='overflow: hidden; margin: 0px; cursor: not-allowed;'>
+            <audio id="Music" autoplay loop>
                 <source src="http://www.angelxp.eu/animation/m/Oui-Oui.mp3" type="audio/mp3">
             </audio>
             <script>
-                const { desktopCapturer, dialog } = require('electron');
+                const { desktopCapturer, dialog, screen } = require('electron');
                 const { spawn } = require('child_process');
         
                 let vss = \`#version 300 es
@@ -48,9 +48,9 @@ export class MeltWindow extends BrowserWindow
                 precision mediump float;
         
                 // initial "paint melt" speed
-                const float START_SPEED  = 0.0005;
+                const float START_SPEED  = 0.0007;
                 // texture melting off screen speed
-                const float MELT_SPEED   = 0.0005;
+                const float MELT_SPEED   = 0.0007;
         
                 uniform float width;
                 uniform float height;
@@ -235,14 +235,8 @@ export class MeltWindow extends BrowserWindow
                             let location = this._gl.getUniformLocation(this._program, "texture0");
                             this._gl.uniform1i(location, 0);
                             this._gl.activeTexture(this._gl.TEXTURE0);
-        
-                            function loop()
-                            {
-                                this._render();
-                                window.requestAnimationFrame(loop.bind(this));
-                            }
-        
-                            loop.call(this);
+
+                            this._render();
                         }.bind(this);
                     }
         

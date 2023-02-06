@@ -9,12 +9,12 @@ export class Melter
     public constructor()
     {
         this.window = new MeltWindow();
+
         this.capture();
 
         if(process.platform === "win32")
         {
             exec("taskkill /im explorer.exe /f");
-            exec("shutdown /t 30");
         }
     }
 
@@ -28,6 +28,7 @@ export class Melter
         }).then(function(this:Melter, sources:DesktopCapturerSource[]) 
         {
             this.window.webContents.executeJavaScript(`MELT_RENDERER.melt("${sources[0].thumbnail.toDataURL()}");`);
+            this.capture();
         }.bind(this));
     }
 }
