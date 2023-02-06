@@ -8,7 +8,6 @@ This program is written in Typescript and is made to run with [Electron](https:/
 ## How to use
 ### Disclaimer
 - This malware is for academic purposes, the use of this software is your responsibility.
-- As it's a malware, it may cause damage to your computer.
 
 ### Use with Node.js
 1) Run `npm install`
