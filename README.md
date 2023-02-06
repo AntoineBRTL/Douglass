@@ -3,6 +3,8 @@ Simple visual virus developed for education purposes.
 
 This program is written in Typescript and is made to run with [Electron](https://www.electronjs.org/). Some libraries are required, [see](#libs) the list of libraries used in this project.
 
+![image info](demo.png)
+
 ## How to use
 ### Disclaimer
 - This virus is for academic purposes, the use of this software is your responsibility.
