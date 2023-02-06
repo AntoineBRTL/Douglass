@@ -1,5 +1,5 @@
 # Douglass
-Simple visual virus developed for education purposes.
+Simple visual malware developed for education purposes.
 
 This program is written in Typescript and is made to run with [Electron](https://www.electronjs.org/). Some libraries are required, [see](#libs) the list of libraries used in this project.
 
