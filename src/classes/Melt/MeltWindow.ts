@@ -24,6 +24,8 @@ export class MeltWindow extends BrowserWindow
             }
         });
 
+        this.focus();
+
         // this.setIgnoreMouseEvents(true);
         // this.webContents.openDevTools({mode:"detach"});
 
